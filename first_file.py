@@ -1,1 +1,0 @@
-print("welcome to git version control system")

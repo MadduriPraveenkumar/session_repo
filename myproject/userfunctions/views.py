@@ -1,7 +1,7 @@
+from django.shortcuts import render
 from .serializers import UserSerializer
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-
 
 
 def user_registration(request):
@@ -12,4 +12,7 @@ def user_registration(request):
             return Response({"id": user.id}, status=status.HTTP_201_CREATED)
         except:
             pass
+    pass
+
+def user_login(request):
     pass

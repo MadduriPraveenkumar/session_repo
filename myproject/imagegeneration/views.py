@@ -1,3 +1,5 @@
+from django.shortcuts import render
+
 import json
 import requests
 import logging
@@ -10,7 +12,7 @@ api_key = "key"
 logger = logging.getLogger(__name__)
 
 @api_view(["POST"])
-def image_generation(request):
+def stable_diffusion(request):
     logger.info("In image_generation")
     try:
         payload = request.data
@@ -41,10 +43,6 @@ def image_generation(request):
         logger.exception("An unexpected error occured: %s", str(e))
         return Response({"status": "error", "detail": "An unexcepted error occured"}, status=500)
 
-# payload = {
-#     "prompt": "a futuristic city at sunset",
-#     "aspect_ratio": "16:9",
-#     "output_format": "png"
-# }
 
-
+def lightx(request):
+    pass
